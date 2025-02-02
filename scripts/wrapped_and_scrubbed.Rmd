@@ -1,0 +1,30 @@
+---
+title: "Surgery Wrapped"
+output: html_notebook
+---
+
+```{r loading}
+# Load necessary libraries
+library(dplyr)
+library(readr)
+library(htmltools)
+
+# Specify the file path
+file_path <- "/Users/anthonymorada/Documents/db/2024-10-15-ACGME-CaseLogs-aomorada.csv"
+
+# Read the CSV file
+df <- read_csv(file_path, col_names = TRUE, show_col_types = FALSE) %>%
+  select(
+    ProgramId, ProcedureDate, CurrentProgramYear, YearOfCase, Code,
+    Credit, CodeAttributes, AreaDesc, AttendingLName, AttendingFName,
+    ResidentId, ResidentFName, ResidentLName, InstituteCity,
+    InstituteSt, CPTDesc, ResidentRole, PatientType, RotationName,
+    DefinedCategories, CaseTypes
+  )
+```
+
+
+```{r simplifying procedures}
+
+```
+
